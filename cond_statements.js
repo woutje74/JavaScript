@@ -1,5 +1,9 @@
-let day = (Math.random() * 10) ;
+let day = (Math.random() * 7);
+console.log(day);
 console.log('Today is daynumber: ' + Math.floor(day));
+
+day = Math.floor(day);
+console.log(day);
 
 /*shorthand declaration
 let weekday = day || noday
@@ -16,6 +20,9 @@ if (day <= 7 && day !== 0) {
 
 //Ternary operator
 (day === 6 || day === 7) ? console.log('It\'s weekend!') : console.log('It\'s a business day.');
+
+// a ternary operator can also be written as follows
+console.log(day >= 6 && day !==0 ? "It's the weekend!" : "It's a business day.");
 
 //using a switch operator
 switch (Math.floor(day)) {
@@ -37,3 +44,9 @@ switch (Math.floor(day)) {
     break;
 }
 
+console.log();
+console.log('The following outcome is determined using an array and Math.random:');
+days =['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+day = Math.floor(Math.random() * 7 + 1);
+randomDay = days[day - 1];
+console.log(randomDay);
